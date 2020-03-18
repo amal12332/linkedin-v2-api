@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MyApp</title>
-  <base href="/">
+  <title>Rocket Mortgage</title>
+  <base href="./">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- begin -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+<!-- <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script> -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
 
@@ -18,41 +18,6 @@
 </head>
 <body>
   <app-root></app-root>
-  <a id="linkedin-button" class="btn btn-block btn-social btn-linkedin linkedIn">
-      <i class="fa fa-linkedin"></i> 
-      <span>Sign in with Linkedin</span>
-    </a>
-
-    <script>
-      $('#linkedin-button').on('click', function() {
-        // Initialize with your OAuth.io app public key
-        OAuth.initialize('F1wAOAqubBtWOVPPwdHcIx4idn8');
-        // Use popup for oauth
-        OAuth.popup('linkedin2').then(linkedin => {
-          console.log('linkedin:',linkedin);
-          // Prompts 'welcome' message with User's email on successful login
-          // #me() is a convenient method to retrieve user data without requiring you
-          // to know which OAuth provider url to call
-          linkedin.me().then(data => {
-            console.log('me data:', data);
-            alert('Linkedin says your email is:' + data.email + ".\nView browser 'Console Log' for more details");
-          })
-          // Retrieves user data from OAuth provider by using #get() and
-          // OAuth provider url
-          // linkedin.get('/v2/me?projection=(id,firstName,lastName,public-profile-url,location)').then(data => {
-          linkedin.get('/v2/me').then(data => {
-            console.log('self data:', data);
-          })
-          linkedin.get('/v2/emailAddress?q=members&projection=(elements*(handle~))').then(data => {
-            console.log('email data:', data);
-          })
-          // linkedin.get('/v2/liteProfile').then(data => {
-          //   console.log('liteProfile data:', data);
-          // })
-
-
-        });
-      })
-    </script>
+  
 </body>
 </html>

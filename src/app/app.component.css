@@ -1,0 +1,33 @@
+.container {
+  padding: 24px;
+  padding-left: 44px;
+}
+
+.firld-group {
+  display: flex;
+  padding-bottom: 12px;
+}
+
+.property {
+  margin-right: 11px;
+  width: 99px;
+}
+
+.lnkdin-btn {
+  margin-left: 44px;
+}
+
+.data-header {
+  padding-left: 91px;
+  padding-bottom: 21px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.field-value {
+  border: none;
+  border-bottom: 1px solid #c0cedc;
+  padding: 5px;
+  outline: none;
+  padding-top: 0px;
+}
